@@ -75,7 +75,7 @@ img {
 }
 
 .movie:hover .movie--content {
-    opacity: 1;
+    transform: scale(1);
 }
 
 .movie--content {
@@ -91,8 +91,8 @@ img {
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.55, 0.085, 0.32, 1.25);
 }
 
 .movie--name {
