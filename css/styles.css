@@ -12,9 +12,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 20px;
     background-color: cornflowerblue;
+    color: #aaaaaa;
 }
 
 img {
@@ -38,8 +39,8 @@ img {
     padding-left: 24px;
     padding-right: 24px;
     margin-top: 50px;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
 }
 
 .movies--list {
@@ -51,16 +52,82 @@ img {
     list-style-type: none;
     margin-left: -50px;
     margin-right: -50px;
+    padding-bottom: 200px;
 }
 
 .movie {
+    position: relative;
+    z-index: 1;
     margin-left: 50px;
     margin-right: 50px;
+    border-radius: 2px;
 }
 
 .movie--img {
     display: block;
-    width: 300px;
-    height: 500px;
+    width: 230px;
+    height: 350px;
     object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 7px 15px -1px #494848;
+}
+
+.movie:hover .movie--content {
+    opacity: 1;
+}
+
+.movie--content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 270px;
+    position: absolute;
+    z-index: -1;
+    left: -20px;
+    top: 15px;
+    padding-top: 350px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.movie--name {
+    font-size: 18px;
+    margin: 0;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.movie--description {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+.movie--price {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.movie--price-sale {
+    font-size: 18px;
+    color: #29d629;
+}
+
+.movie--price-main {
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.movie--buy-button {
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2f2e2e;
+    padding: 10px;
+    text-transform: uppercase;
 }
